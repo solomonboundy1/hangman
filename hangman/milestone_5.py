@@ -52,14 +52,27 @@ def play_game(word_list):
     hang = Hangman(word_list, num_lives)
     while True:
         if hang.num_lives == 0:
-            print("You lost!")
+            print(f"You lost! The word was {hang.word}")
             break
         elif hang.num_letters > 0:
             hang.ask_for_input()
-            print('num lives: ' ,hang.num_lives, 'num letters' , hang.num_letters)
+            print('number of lives: ' ,hang.num_lives, 'number of letters left: ' , hang.num_letters)
         elif hang.num_lives != 0 and not hang.num_letters > 0:
             print('Congratulations. You won the game!')
             break
         
 
-play_game(['apple', 'pear', 'banana', 'mango', 'strawberry'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+play_game(['apple', 'pear', 'banana', 'mango', 'strawberry', 'pineapple', 'grapefruit', 'pomegranate', 'jackfruit', 'avocado'])
